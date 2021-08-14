@@ -1,7 +1,20 @@
-.nav-banner {
+.nav-bar {
     background-color: rgba(0, 100, 0);
 }
 
-.nav-button {
-    background-color: white;
+.nav-item {
+    background-color: rgba(247,168,0);
+}
+
+.logo {
+    width: 15%;
+}
+
+a {
+    text-decoration: none !important;
+    color: white !important;
+}
+
+a:hover {
+    background-color: rgba(247,168,0);
 }
