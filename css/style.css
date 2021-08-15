@@ -11,14 +11,16 @@
 }
 
 .logo {
-    width: 15%;
+    width: 250px;
 }
 
-a {
+.nav-bar>a {
+    flex: 1;
+    text-align: center;
     text-decoration: none !important;
     color: white !important;
 }
 
-a:hover {
+.nav-bar>a:hover {
     background-color: rgba(247,168,0);
 }
