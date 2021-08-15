@@ -24,3 +24,12 @@
 .nav-bar>a:hover {
     background-color: rgba(247,168,0);
 }
+
+.profile-img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.card {
+    box-shadow: 10px 10px 30px -10px rgb(200, 197, 197);
+}
