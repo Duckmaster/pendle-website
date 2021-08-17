@@ -1,0 +1,19 @@
+{
+    "timetable": {
+        "events": [
+            {
+                "name": "Arrivals",
+                "date": "sat-2-oct",
+                "time": "morning",
+                "type": "n/a"
+            },
+            {
+                "name": "Arrivals",
+                "date": "sat-2-oct",
+                "time": "afternoon",
+                "type": "n/a"
+            }
+        ]
+    }
+
+}

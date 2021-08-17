@@ -24,6 +24,18 @@
     <meta name="theme-color" content="#ffffff">
 
     <script>
+        function displayTimetable() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var timetableJSON = JSON.parse(this.responseText);
+                    console.log(timetableJSON.timetable.events);
+                }
+            }
+            xmlhttp.open("GET", "timetable.txt");
+            xmlhttp.send();
+        }
+
         function createTimetableCards(numCards) {
             var numRows = Math.ceil(numCards / 6);
             var timetableDiv = document.getElementById("timetable");
@@ -67,7 +79,7 @@
 
 </head>
 
-<body onload="createTimetableCards(12)">
+<body onload="displayTimetable()">
     <div>
         <!-- Header -->
         <!-- Pendle logo -->
