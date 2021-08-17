@@ -30,6 +30,9 @@
     border-radius: 50%;
 }
 
-.card {
+.jcr-cards>.card {
     box-shadow: 10px 10px 30px -10px rgb(200, 197, 197);
+}
+.timetable>.card {
+    width: 18rem;
 }
