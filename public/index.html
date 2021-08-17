@@ -25,14 +25,43 @@
 
     <script>
         function createTimetableCards(numCards) {
-            var numRows = Math.ceil(numCards / 5);
+            var numRows = Math.ceil(numCards / 6);
             var timetableDiv = document.getElementById("timetable");
             for (let i = 0; i < numRows; i++) {
                 var newDiv = document.createElement("div");
                 newDiv.id = `row${i+1}`;
                 newDiv.className = "d-flex flex-row";
+                //timetableDiv.appendChild(newDiv);
+                for (let j = 0; j < 6 && numCards > 0; j++) {
+                    var newCard = createCard();
+                    newDiv.appendChild(newCard);
+                    numCards--;
+                }
                 timetableDiv.appendChild(newDiv);
             }
+        }
+        function createCard() {
+            var newCard = document.createElement("div");
+            newCard.className = "card m-3";
+            newCard.style = "width: 18rem;";
+            var cardBody = document.createElement("div");
+            cardBody.className = "card-body";
+            var cardTitle = document.createElement("h5");
+            cardTitle.className = "card-title";
+            cardTitle.textContent = "Title";
+            var cardText = document.createElement("p");
+            cardText.className = "card-text";
+            cardText.textContent = "some text";
+            var cardButton = document.createElement("a");
+            cardButton.className = "btn btn-primary";
+            cardButton.textContent = "See more...";
+
+            cardBody.appendChild(cardTitle);
+            cardBody.appendChild(cardText);
+            cardBody.appendChild(cardButton);
+            newCard.appendChild(cardBody);
+
+            return newCard;
         }
     </script>
 
