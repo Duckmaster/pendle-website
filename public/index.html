@@ -23,6 +23,19 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
+    <script>
+        function createTimetableCards(numCards) {
+            var numRows = Math.ceil(numCards / 5);
+            var timetableDiv = document.getElementById("timetable");
+            for (let i = 0; i < numRows; i++) {
+                var newDiv = document.createElement("div");
+                newDiv.id = `row${i+1}`;
+                newDiv.className = "d-flex flex-row";
+                timetableDiv.appendChild(newDiv);
+            }
+        }
+    </script>
+
 </head>
 
 <body>
@@ -51,12 +64,21 @@
     <div>
         <!-- Main body -->
         <h1>Main page</h1>
-        <div class="timetable">
-            <div class="card m-3">  
-                <div class="card-body">
-                    <h5 class="card-title">Title</h5>
-                    <p class="card-text">some text</p>
-                    <a href="#" class="btn btn-primary">See more...</a>
+        <div id="timetable">
+            <div class="d-flex flex-row">
+                <div class="card m-3" style="width: 18rem;">  
+                    <div class="card-body">
+                        <h5 class="card-title">Title</h5>
+                        <p class="card-text">some text</p>
+                        <a href="#" class="btn btn-primary">See more...</a>
+                    </div>
+                </div>
+                <div class="card m-3" style="width: 18rem;">  
+                    <div class="card-body">
+                        <h5 class="card-title">Title</h5>
+                        <p class="card-text">some text</p>
+                        <a href="#" class="btn btn-primary">See more...</a>
+                    </div>
                 </div>
             </div>
         </div>
