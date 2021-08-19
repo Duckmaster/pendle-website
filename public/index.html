@@ -25,11 +25,35 @@
 
     <script>
         function displayTimetable() {
+            getJSON(function(jsonText) {
+                var timetableJSON = JSON.parse(jsonText);
+                var events = timetableJSON.timetable.events;
+                var numEvents =  Object.keys(events).length;
+                createTimetableCards(numEvents);
+                var timetableDiv = document.getElementById("timetable");
+                var rows = timetableDiv.children;
+                var i = 0;
+                for (var row of rows) {
+                    var cards = row.children;
+                    for (var card of cards) {
+                        var body = card.firstChild;
+                        var title = body.getElementsByTagName("h5")[0];
+                        title.textContent = events[i].name;
+                        var date = body.getElementsByTagName("p")[0];
+                        date.textContent = `Date: ${events[i].date} (${events[i].time}) `;
+                        var description = body.getElementsByTagName("p")[1];
+                        description.textContent = events[i].description;
+                        i++;
+                    }
+                }
+            })            
+        }
+
+        function getJSON(cb) {
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                    var timetableJSON = JSON.parse(this.responseText);
-                    console.log(timetableJSON.timetable.events);
+                    cb(this.responseText);
                 }
             }
             xmlhttp.open("GET", "timetable.json");
@@ -61,6 +85,9 @@
             var cardTitle = document.createElement("h5");
             cardTitle.className = "card-title";
             cardTitle.textContent = "Title";
+            var cardDate = document.createElement("p");
+            cardDate.className = "card-text";
+            cardDate.textContent = "some date";
             var cardText = document.createElement("p");
             cardText.className = "card-text";
             cardText.textContent = "some text";
@@ -69,6 +96,7 @@
             cardButton.textContent = "See more...";
 
             cardBody.appendChild(cardTitle);
+            cardBody.appendChild(cardDate);
             cardBody.appendChild(cardText);
             cardBody.appendChild(cardButton);
             newCard.appendChild(cardBody);
