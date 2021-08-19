@@ -23,9 +23,91 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
+    <script>
+        function displayTimetable() {
+            getJSON(function(jsonText) {
+                var timetableJSON = JSON.parse(jsonText);
+                var events = timetableJSON.timetable.events;
+                var numEvents =  Object.keys(events).length;
+                createTimetableCards(numEvents);
+                var timetableDiv = document.getElementById("timetable");
+                var rows = timetableDiv.children;
+                var i = 0;
+                for (var row of rows) {
+                    var cards = row.children;
+                    for (var card of cards) {
+                        var body = card.firstChild;
+                        var title = body.getElementsByTagName("h5")[0];
+                        title.textContent = events[i].name;
+                        var date = body.getElementsByTagName("p")[0];
+                        date.textContent = `Date: ${events[i].date} (${events[i].time}) `;
+                        var description = body.getElementsByTagName("p")[1];
+                        description.textContent = events[i].description;
+                        i++;
+                    }
+                }
+            })            
+        }
+
+        function getJSON(cb) {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    cb(this.responseText);
+                }
+            }
+            xmlhttp.open("GET", "timetable.json");
+            xmlhttp.send();
+        }
+
+        function createTimetableCards(numCards) {
+            var numRows = Math.ceil(numCards / 6);
+            var timetableDiv = document.getElementById("timetable");
+            for (let i = 0; i < numRows; i++) {
+                var newDiv = document.createElement("div");
+                newDiv.id = `row${i+1}`;
+                newDiv.className = "d-flex flex-row";
+                //timetableDiv.appendChild(newDiv);
+                for (let j = 0; j < 6 && numCards > 0; j++) {
+                    var newCard = createCard();
+                    newDiv.appendChild(newCard);
+                    numCards--;
+                }
+                timetableDiv.appendChild(newDiv);
+            }
+        }
+        function createCard() {
+            var newCard = document.createElement("div");
+            newCard.className = "card m-3";
+            newCard.style = "width: 18rem;";
+            var cardBody = document.createElement("div");
+            cardBody.className = "card-body";
+            var cardTitle = document.createElement("h5");
+            cardTitle.className = "card-title";
+            cardTitle.textContent = "Title";
+            var cardDate = document.createElement("p");
+            cardDate.className = "card-text";
+            cardDate.textContent = "some date";
+            var cardText = document.createElement("p");
+            cardText.className = "card-text";
+            cardText.textContent = "some text";
+            var cardButton = document.createElement("a");
+            cardButton.className = "btn btn-primary";
+            cardButton.textContent = "See more...";
+
+            cardBody.appendChild(cardTitle);
+            cardBody.appendChild(cardDate);
+            cardBody.appendChild(cardText);
+            cardBody.appendChild(cardButton);
+            newCard.appendChild(cardBody);
+
+            return newCard;
+        }
+    </script>
+
 </head>
 
-<body>
+<body onload="displayTimetable()">
     <div>
         <!-- Header -->
         <!-- Pendle logo -->
@@ -51,6 +133,7 @@
     <div>
         <!-- Main body -->
         <h1>Main page</h1>
+        <div id="timetable"> </div>
     </div>
 
     <!-- More bootstrap -->

@@ -1,0 +1,35 @@
+{
+    "timetable": {
+        "events": [
+            {
+                "name": "Arrivals",
+                "date": "Saturday 2nd October",
+                "time": "Morning",
+                "type": "n/a",
+                "description": "Moving in!"
+            },
+            {
+                "name": "Arrivals",
+                "date": "Saturday 2nd October",
+                "time": "Afternoon",
+                "type": "n/a",
+                "description": "Moving in!"
+            },
+            {
+                "name": "Basement Bash",
+                "date": "Saturday 2nd October",
+                "time": "Evening",
+                "type": "Loud",
+                "description": "Join us for a party in Pendle Rooms!"
+            },
+            {
+                "name": "Board games/bar sports",
+                "date": "Saturday 2nd October",
+                "time": "Evening",
+                "type": "Quiet",
+                "description": "Come play some board games or bar sports!"
+            }
+        ]
+    }
+
+}
