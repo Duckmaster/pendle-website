@@ -110,7 +110,7 @@
             var timetableRow = document.getElementById("timetable").children[0];
             for (card of timetableRow.children) {
                 var date = card.children[0].children[1].textContent;
-                if (!date.includes(selectedDay)) {
+                if (!date.includes(selectedDay) && selectedDay != "none") {
                     card.style["display"] = "none";
                 } else {
                     card.style["display"] = "";
@@ -149,6 +149,7 @@
         <div class="p-4 flex-row" id="controls">
             <label for="days">Filter by day: </label>
             <select id="days" onchange="filterEvents()">
+                <option value="none" selected> Select a day </option>
                 <option value="Saturday 2nd October">Saturday 2nd October</option>
                 <option value="Sunday 3rd October">Sunday 3rd October</option>
                 <option value="Monday 4th October">Monday 4th October</option>
