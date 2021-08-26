@@ -56,7 +56,7 @@
                     cb(this.responseText);
                 }
             }
-            xmlhttp.open("GET", "timetable.json");
+            xmlhttp.open("GET", "timetable.json?r="+Math.random());
             xmlhttp.send();
         }
 
@@ -133,7 +133,20 @@
 
     <div>
         <!-- Main body -->
-        <h1>Main page</h1>
+        <div class="p-4 flex-row" id="controls">
+            <label for="days">Filter by day: </label>
+            <select id="days">
+                <option value="Saturday 2nd October">Saturday 2nd October</option>
+                <option value="Sunday 3rd October">Sunday 3rd October</option>
+                <option value="Monday 4th October">Monday 4th October</option>
+                <option value="Tuesday 5th October">Tuesday 5th October</option>
+                <option value="Wednesday 6th October">Wednesday 6th October</option>
+                <option value="Thursday 7th October">Thursday 7th October</option>
+                <option value="Friday 8th October">Friday 8th October</option>
+                <option value="Saturday 9th October">Saturday 9th October</option>
+                <option value="Sunday 10th October">Sunday 10th October</option>
+            </select>
+        </div>
         <div id="timetable"> </div>
     </div>
 
