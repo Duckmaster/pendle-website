@@ -21,6 +21,10 @@
     color: white !important;
 }
 
+.nav-bar>a>div {
+    height: 100%;
+}
+
 .nav-bar>a:hover {
     background-color: rgba(247,168,0);
 }
