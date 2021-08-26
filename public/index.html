@@ -56,44 +56,46 @@
                     cb(this.responseText);
                 }
             }
-            xmlhttp.open("GET", "timetable.json");
+            xmlhttp.open("GET", "timetable.json?r="+Math.random());
             xmlhttp.send();
         }
 
         function createTimetableCards(numCards) {
             var numRows = Math.ceil(numCards / 6);
             var timetableDiv = document.getElementById("timetable");
+            var row = document.createElement("div");
+            row.className = "d-flex flex-wrap";
             for (let i = 0; i < numRows; i++) {
-                var newDiv = document.createElement("div");
-                newDiv.id = `row${i+1}`;
-                newDiv.className = "d-flex flex-row";
                 //timetableDiv.appendChild(newDiv);
                 for (let j = 0; j < 6 && numCards > 0; j++) {
                     var newCard = createCard();
-                    newDiv.appendChild(newCard);
+                    row.appendChild(newCard);
                     numCards--;
                 }
-                timetableDiv.appendChild(newDiv);
             }
+            timetableDiv.appendChild(row);
         }
         function createCard() {
             var newCard = document.createElement("div");
             newCard.className = "card m-3";
-            newCard.style = "width: 18rem;";
+            newCard.style = "width: 18rem; border: 3px solid DarkGreen;";
             var cardBody = document.createElement("div");
-            cardBody.className = "card-body";
+            cardBody.className = "card-body d-flex flex-column";
             var cardTitle = document.createElement("h5");
             cardTitle.className = "card-title";
             cardTitle.textContent = "Title";
+            cardTitle.style = "text-align: center";
             var cardDate = document.createElement("p");
             cardDate.className = "card-text";
             cardDate.textContent = "some date";
             var cardText = document.createElement("p");
             cardText.className = "card-text";
             cardText.textContent = "some text";
+            cardText.style = "flex-grow: 1;";
             var cardButton = document.createElement("a");
-            cardButton.className = "btn btn-primary";
+            cardButton.className = "btn";
             cardButton.textContent = "See more...";
+            cardButton.style = "background-color: rgba(0, 100, 0); color: rgba(255, 255, 255);"
 
             cardBody.appendChild(cardTitle);
             cardBody.appendChild(cardDate);
@@ -102,6 +104,19 @@
             newCard.appendChild(cardBody);
 
             return newCard;
+        }
+
+        function filterEvents() {
+            var selectedDay = document.getElementById("days").value;
+            var timetableRow = document.getElementById("timetable").children[0];
+            for (card of timetableRow.children) {
+                var date = card.children[0].children[1].textContent;
+                if (!date.includes(selectedDay) && selectedDay != "none") {
+                    card.style["display"] = "none";
+                } else {
+                    card.style["display"] = "";
+                }
+            }
         }
     </script>
 
@@ -117,7 +132,7 @@
     <div class="d-flex flex-row nav-bar">
         <!-- Nav bar -->
         <a href="#">
-            <div class="p-2 nav-item-selected" style="flex: 1;">Welcome Week Schedule</div>
+            <div class="p-2 nav-item-selected">Welcome Week Schedule</div>
         </a>
         <a href="jcr.html">
             <div class="p-2">Meet the JCR</div>
@@ -132,8 +147,22 @@
 
     <div>
         <!-- Main body -->
-        <h1>Main page</h1>
-        <div id="timetable"> </div>
+        <div class="p-4 flex-row" id="controls">
+            <label for="days">Filter by day: </label>
+            <select id="days" onchange="filterEvents()">
+                <option value="none" selected> Select a day </option>
+                <option value="Saturday 2nd October">Saturday 2nd October</option>
+                <option value="Sunday 3rd October">Sunday 3rd October</option>
+                <option value="Monday 4th October">Monday 4th October</option>
+                <option value="Tuesday 5th October">Tuesday 5th October</option>
+                <option value="Wednesday 6th October">Wednesday 6th October</option>
+                <option value="Thursday 7th October">Thursday 7th October</option>
+                <option value="Friday 8th October">Friday 8th October</option>
+                <option value="Saturday 9th October">Saturday 9th October</option>
+                <option value="Sunday 10th October">Sunday 10th October</option>
+            </select>
+        </div>
+        <div id="timetable"\>
     </div>
 
     <!-- More bootstrap -->
