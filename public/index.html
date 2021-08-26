@@ -80,7 +80,7 @@
             newCard.className = "card m-3";
             newCard.style = "width: 18rem; border: 3px solid DarkGreen;";
             var cardBody = document.createElement("div");
-            cardBody.className = "card-body";
+            cardBody.className = "card-body d-flex flex-column";
             var cardTitle = document.createElement("h5");
             cardTitle.className = "card-title";
             cardTitle.textContent = "Title";
@@ -91,6 +91,7 @@
             var cardText = document.createElement("p");
             cardText.className = "card-text";
             cardText.textContent = "some text";
+            cardText.style = "flex-grow: 1;";
             var cardButton = document.createElement("a");
             cardButton.className = "btn";
             cardButton.textContent = "See more...";
