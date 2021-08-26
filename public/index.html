@@ -63,18 +63,17 @@
         function createTimetableCards(numCards) {
             var numRows = Math.ceil(numCards / 6);
             var timetableDiv = document.getElementById("timetable");
+            var row = document.createElement("div");
+            row.className = "d-flex flex-wrap";
             for (let i = 0; i < numRows; i++) {
-                var newDiv = document.createElement("div");
-                newDiv.id = `row${i+1}`;
-                newDiv.className = "d-flex flex-row";
                 //timetableDiv.appendChild(newDiv);
                 for (let j = 0; j < 6 && numCards > 0; j++) {
                     var newCard = createCard();
-                    newDiv.appendChild(newCard);
+                    row.appendChild(newCard);
                     numCards--;
                 }
-                timetableDiv.appendChild(newDiv);
             }
+            timetableDiv.appendChild(row);
         }
         function createCard() {
             var newCard = document.createElement("div");
