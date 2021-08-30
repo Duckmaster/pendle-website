@@ -33,3 +33,11 @@
 .jcr-cards>.card {
     box-shadow: 10px 10px 30px -10px rgb(200, 197, 197);
 }
+
+label {
+    margin-bottom: 0 !important;
+}
+
+p {
+    margin-bottom: 0 !important;
+}

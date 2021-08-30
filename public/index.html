@@ -163,23 +163,25 @@
 
     <div>
         <!-- Main body -->
-        <div class="p-2 d-flex" style="align-items: flex-start;" id="controls">
-            <label class="pr-2" for="days">Filter by day: </label>
-            <select id="days" onchange="filterEvents()">
-                <option value=" " selected> Select a day </option>
-                <option value="Saturday 2nd October">Saturday 2nd October</option>
-                <option value="Sunday 3rd October">Sunday 3rd October</option>
-                <option value="Monday 4th October">Monday 4th October</option>
-                <option value="Tuesday 5th October">Tuesday 5th October</option>
-                <option value="Wednesday 6th October">Wednesday 6th October</option>
-                <option value="Thursday 7th October">Thursday 7th October</option>
-                <option value="Friday 8th October">Friday 8th October</option>
-                <option value="Saturday 9th October">Saturday 9th October</option>
-                <option value="Sunday 10th October">Sunday 10th October</option>
-            </select>
+        <div class="px-2 pt-4 d-flex flex-wrap align-items-end" style="align-items: flex-start;" id="controls">
+            <div class="pr-4">
+                <label class="pr-2" for="days">Filter by day: </label>
+                <select id="days" onchange="filterEvents()">
+                    <option value=" " selected> Select a day </option>
+                    <option value="Saturday 2nd October">Saturday 2nd October</option>
+                    <option value="Sunday 3rd October">Sunday 3rd October</option>
+                    <option value="Monday 4th October">Monday 4th October</option>
+                    <option value="Tuesday 5th October">Tuesday 5th October</option>
+                    <option value="Wednesday 6th October">Wednesday 6th October</option>
+                    <option value="Thursday 7th October">Thursday 7th October</option>
+                    <option value="Friday 8th October">Friday 8th October</option>
+                    <option value="Saturday 9th October">Saturday 9th October</option>
+                    <option value="Sunday 10th October">Sunday 10th October</option>
+                </select>
+            </div>
 
-            <p class="pl-4 pr-2"> Filter by time of day: </p>
             <div class="d-flex">
+                <p class="pr-2"> Filter by time of day: </p>
                 <div class="px-2">
                     <label for="morningCB">Morning:</label>
                     <input type="checkbox" id="morningCB" value="Morning" onchange="filterEvents()">
