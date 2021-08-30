@@ -107,11 +107,27 @@
         }
 
         function filterEvents() {
-            var selectedDay = document.getElementById("days").value;
+            var controlsDiv = document.getElementById("controls");
+            var daySelect = controlsDiv.getElementsByTagName("select")[0];
+            var checkboxes = Array.from(controlsDiv.getElementsByTagName("input"));
+            var tickedCheckboxes = checkboxes.filter(cb => cb.checked);
+             
             var timetableRow = document.getElementById("timetable").children[0];
+            var selectedDay = daySelect.value;
+
             for (card of timetableRow.children) {
                 var date = card.children[0].children[1].textContent;
-                if (!date.includes(selectedDay) && selectedDay != "none") {
+                var hide = true;
+                if (date.includes(selectedDay)) {
+                    if (tickedCheckboxes.length == 0) {
+                        hide = false;
+                    } else {
+                        for (cb of tickedCheckboxes) {
+                            if (date.includes(cb.value)) hide = false;
+                        }
+                    }
+                } 
+                if (hide) {
                     card.style["display"] = "none";
                 } else {
                     card.style["display"] = "";
@@ -147,20 +163,39 @@
 
     <div>
         <!-- Main body -->
-        <div class="p-4 flex-row" id="controls">
-            <label for="days">Filter by day: </label>
-            <select id="days" onchange="filterEvents()">
-                <option value="none" selected> Select a day </option>
-                <option value="Saturday 2nd October">Saturday 2nd October</option>
-                <option value="Sunday 3rd October">Sunday 3rd October</option>
-                <option value="Monday 4th October">Monday 4th October</option>
-                <option value="Tuesday 5th October">Tuesday 5th October</option>
-                <option value="Wednesday 6th October">Wednesday 6th October</option>
-                <option value="Thursday 7th October">Thursday 7th October</option>
-                <option value="Friday 8th October">Friday 8th October</option>
-                <option value="Saturday 9th October">Saturday 9th October</option>
-                <option value="Sunday 10th October">Sunday 10th October</option>
-            </select>
+        <div class="px-2 pt-4 d-flex flex-wrap align-items-end" style="align-items: flex-start;" id="controls">
+            <div class="pr-4">
+                <label class="pr-2" for="days">Filter by day: </label>
+                <select id="days" onchange="filterEvents()">
+                    <option value=" " selected> Select a day </option>
+                    <option value="Saturday 2nd October">Saturday 2nd October</option>
+                    <option value="Sunday 3rd October">Sunday 3rd October</option>
+                    <option value="Monday 4th October">Monday 4th October</option>
+                    <option value="Tuesday 5th October">Tuesday 5th October</option>
+                    <option value="Wednesday 6th October">Wednesday 6th October</option>
+                    <option value="Thursday 7th October">Thursday 7th October</option>
+                    <option value="Friday 8th October">Friday 8th October</option>
+                    <option value="Saturday 9th October">Saturday 9th October</option>
+                    <option value="Sunday 10th October">Sunday 10th October</option>
+                </select>
+            </div>
+
+            <div class="d-flex">
+                <p class="pr-2"> Filter by time of day: </p>
+                <div class="px-2">
+                    <label for="morningCB">Morning:</label>
+                    <input type="checkbox" id="morningCB" value="Morning" onchange="filterEvents()">
+                </div>
+                <div class="px-2">
+                    <label for="afternoonCB">Afternoon:</label>
+                    <input type="checkbox" id="afternoonCB" value="Afternoon" onchange="filterEvents()">
+                </div>
+                <div class="px-2">
+                    <label for="eveningCB">Evening:</label>
+                    <input type="checkbox" id="eveningCB" value="Evening" onchange="filterEvents()">
+                </div>
+            </div>
+            
         </div>
         <div id="timetable"\>
     </div>
