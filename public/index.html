@@ -106,25 +106,28 @@
             return newCard;
         }
 
-        function filterEventsByDay() {
-            var selectedDay = document.getElementById("days").value;
+        function filterEvents() {
+            var controlsDiv = document.getElementById("controls");
+            var daySelect = controlsDiv.getElementsByTagName("select")[0];
+            var checkboxes = Array.from(controlsDiv.getElementsByTagName("input"));
+            var tickedCheckboxes = checkboxes.filter(cb => cb.checked);
+             
             var timetableRow = document.getElementById("timetable").children[0];
-            for (card of timetableRow.children) {
-                var date = card.children[0].children[1].textContent;
-                if (!date.includes(selectedDay) && selectedDay != "none") {
-                    card.style["display"] = "none";
-                } else {
-                    card.style["display"] = "";
-                }
-            }
-        }
+            var selectedDay = daySelect.value;
 
-        function filterEventsByTime() {
-            var selectedDay = document.getElementById("days").value;
-            var timetableRow = document.getElementById("timetable").children[0];
             for (card of timetableRow.children) {
                 var date = card.children[0].children[1].textContent;
-                if (!date.includes(selectedDay) && selectedDay != "none") {
+                var hide = true;
+                if (date.includes(selectedDay)) {
+                    if (tickedCheckboxes.length == 0) {
+                        hide = false;
+                    } else {
+                        for (cb of tickedCheckboxes) {
+                            if (date.includes(cb.value)) hide = false;
+                        }
+                    }
+                } 
+                if (hide) {
                     card.style["display"] = "none";
                 } else {
                     card.style["display"] = "";
@@ -162,8 +165,8 @@
         <!-- Main body -->
         <div class="p-2 d-flex" style="align-items: flex-start;" id="controls">
             <label class="pr-2" for="days">Filter by day: </label>
-            <select id="days" onchange="filterEventsByDay()">
-                <option value="none" selected> Select a day </option>
+            <select id="days" onchange="filterEvents()">
+                <option value=" " selected> Select a day </option>
                 <option value="Saturday 2nd October">Saturday 2nd October</option>
                 <option value="Sunday 3rd October">Sunday 3rd October</option>
                 <option value="Monday 4th October">Monday 4th October</option>
@@ -179,15 +182,15 @@
             <div class="d-flex">
                 <div class="px-2">
                     <label for="morningCB">Morning:</label>
-                    <input type="checkbox" id="morningCB" value="Morning">
+                    <input type="checkbox" id="morningCB" value="Morning" onchange="filterEvents()">
                 </div>
                 <div class="px-2">
                     <label for="afternoonCB">Afternoon:</label>
-                    <input type="checkbox" id="afternoonCB" value="Afternoon">
+                    <input type="checkbox" id="afternoonCB" value="Afternoon" onchange="filterEvents()">
                 </div>
                 <div class="px-2">
                     <label for="eveningCB">Evening:</label>
-                    <input type="checkbox" id="eveningCB" value="Evening">
+                    <input type="checkbox" id="eveningCB" value="Evening" onchange="filterEvents()">
                 </div>
             </div>
             
