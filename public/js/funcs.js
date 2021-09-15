@@ -15,7 +15,7 @@ function displayTimetable() {
             var date = body.getElementsByTagName("p")[0];
             date.textContent = `Date: ${events[i].date} (${events[i].time}) `;
             var description = body.getElementsByTagName("p")[1];
-            description.textContent = events[i].description;
+            description.textContent = events[i].blurb;
             i++;
         }  
     })            
@@ -62,7 +62,8 @@ function createCard() {
     var cardButton = document.createElement("a");
     cardButton.className = "btn";
     cardButton.textContent = "See more...";
-    cardButton.style = "background-color: rgba(0, 100, 0); color: rgba(255, 255, 255);"
+    cardButton.style = "background-color: rgba(0, 100, 0); color: rgba(255, 255, 255);";
+    cardButton.setAttribute("onclick", "createModal(this);")
 
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(cardDate);
@@ -100,4 +101,11 @@ function filterEvents() {
             card.style["display"] = "";
         }
     }
+}
+
+function createModal(cardButton) {
+    getJSON(function(jsonText) {
+        var eventTitle = cardButton.parentElement.parentElement.children[0].getElementsByTagName("h5")[0].textContent;
+        console.log(eventTitle);
+    })
 }

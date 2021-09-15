@@ -4,79 +4,72 @@
             {
                 "name": "Arrivals",
                 "date": "Saturday 2nd October",
-                "time": "Morning",
+                "time": "Morning & Afternoon",
                 "type": "n/a",
-                "description": "Moving in!"
-            },
-            {
-                "name": "Arrivals",
-                "date": "Saturday 2nd October",
-                "time": "Afternoon",
-                "type": "n/a",
-                "description": "Moving in!"
+                "blurb": "Moving in!"
             },
             {
                 "name": "Basement Bash",
                 "date": "Saturday 2nd October",
                 "time": "Evening",
                 "type": "Loud",
-                "description": "Join us for a party in Pendle Rooms!"
+                "blurb": "Join us for a party in Pendle Rooms!"
             },
             {
                 "name": "Board games/bar sports",
                 "date": "Saturday 2nd October",
                 "time": "Evening",
                 "type": "Quiet",
-                "description": "Come play some board games or bar sports!"
+                "blurb": "Come play some board games or bar sports!"
             },
             {
                 "name": "Campus tour and scavenger hunt",
                 "date": "Sunday 3rd October",
                 "time": "Morning",
                 "type": "Quiet",
-                "description": "Have a tour around the campus!"
+                "blurb": "Have a tour around the campus!"
             },
             {
                 "name": "Picnic",
                 "date": "Sunday 3rd October",
                 "time": "Afternoon",
                 "type": "Quiet",
-                "description": "Join us for a lovely picnic"
+                "blurb": "Join us for a lovely picnic"
             },
             {
                 "name": "Online/in person quiz",
                 "date": "Sunday 3rd October",
                 "time": "Evening",
                 "type": "Loud",
-                "description": "First Pendle quiz of the academic year!"
+                "blurb": "First Pendle quiz of the academic year!"
             },
             {
                 "name": "Welfare event",
                 "date": "Monday 4th October",
                 "time": "Morning",
                 "type": "Quiet",
-                "description": "TBA"
+                "blurb": "TBA"
             },
             {
                 "name": "MYCM",
                 "date": "Monday 4th October",
                 "time": "Afternoon",
                 "type": "Quiet",
-                "description": "Meet your coursemates!"
+                "blurb": "Meet your coursemates!"
             },
             {
                 "name": "Glow",
                 "date": "Monday 4th October",
                 "time": "Evening",
                 "type": "Loud",
-                "description": "Skint mondays!!"
+                "blurb": "Skint mondays!!"
             },
             {
                 "name": "Book club",
                 "date": "Monday 4th October",
                 "time": "Evening",
                 "type": "Quiet",
-                "description": "Join our welfare team for a bookclub in Pendle Rooms!"
+                "blurb": "Join our welfare team for a bookclub in Pendle Rooms!"
             }
         ]
     }
