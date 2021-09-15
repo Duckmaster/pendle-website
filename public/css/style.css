@@ -41,3 +41,8 @@ label {
 p {
     margin-bottom: 0 !important;
 }
+
+#top-row > .col-9, .col {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
