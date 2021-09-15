@@ -5,21 +5,19 @@ function displayTimetable() {
         var numEvents =  Object.keys(events).length;
         createTimetableCards(numEvents);
         var timetableDiv = document.getElementById("timetable");
-        var rows = timetableDiv.children;
+        var row = timetableDiv.children[0];
         var i = 0;
-        for (var row of rows) {
-            var cards = row.children;
-            for (var card of cards) {
-                var body = card.firstChild;
-                var title = body.getElementsByTagName("h5")[0];
-                title.textContent = events[i].name;
-                var date = body.getElementsByTagName("p")[0];
-                date.textContent = `Date: ${events[i].date} (${events[i].time}) `;
-                var description = body.getElementsByTagName("p")[1];
-                description.textContent = events[i].description;
-                i++;
-            }
-        }
+        var cards = row.children;
+        for (var card of cards) {
+            var body = card.firstChild;
+            var title = body.getElementsByTagName("h5")[0];
+            title.textContent = events[i].name;
+            var date = body.getElementsByTagName("p")[0];
+            date.textContent = `Date: ${events[i].date} (${events[i].time}) `;
+            var description = body.getElementsByTagName("p")[1];
+            description.textContent = events[i].description;
+            i++;
+        }  
     })            
 }
 
@@ -35,17 +33,12 @@ function getJSON(cb) {
 }
 
 function createTimetableCards(numCards) {
-    var numRows = Math.ceil(numCards / 6);
     var timetableDiv = document.getElementById("timetable");
     var row = document.createElement("div");
     row.className = "d-flex flex-wrap";
-    for (let i = 0; i < numRows; i++) {
-        //timetableDiv.appendChild(newDiv);
-        for (let j = 0; j < 6 && numCards > 0; j++) {
-            var newCard = createCard();
-            row.appendChild(newCard);
-            numCards--;
-        }
+    for (let i = 0; i < numCards; i++) {
+        var newCard = createCard();
+        row.appendChild(newCard);
     }
     timetableDiv.appendChild(row);
 }
