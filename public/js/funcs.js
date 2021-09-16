@@ -63,7 +63,7 @@ function createCard() {
     cardButton.className = "btn";
     cardButton.textContent = "See more...";
     cardButton.style = "background-color: rgba(0, 100, 0); color: rgba(255, 255, 255);";
-    cardButton.setAttribute("onclick", "createModal(this);")
+    cardButton.setAttribute("onclick", "createModal(this)")
 
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(cardDate);
@@ -107,5 +107,17 @@ function createModal(cardButton) {
     getJSON(function(jsonText) {
         var eventTitle = cardButton.parentElement.parentElement.children[0].getElementsByTagName("h5")[0].textContent;
         console.log(eventTitle);
+        var timetableJSON = JSON.parse(jsonText);
+        var events = timetableJSON.timetable.events;
+        var modal = document.getElementById("myModal");
+        for (var event of events) {
+            if (event.name == eventTitle) {
+                console.log(events);
+                modal.getElementsByTagName("h5")[0].textContent = event.name;
+                modal.getElementsByTagName("p")[0].textContent = event.description;
+                $("#myModal").modal();
+            }
+        }
+
     })
 }

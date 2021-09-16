@@ -6,21 +6,35 @@
                 "date": "Saturday 2nd October",
                 "time": "Morning & Afternoon",
                 "type": "n/a",
-                "blurb": "Moving in!"
+                "blurb": "Moving in!",
+                "description": "JCR Exec and Welcome Reps will be around to greet you and show you to your rooms",
+                "p_time": "0900-1800"
             },
             {
-                "name": "Basement Bash",
+                "name": "Welcome Talk",
                 "date": "Saturday 2nd October",
                 "time": "Evening",
-                "type": "Loud",
-                "blurb": "Join us for a party in Pendle Rooms!"
+                "type": "n/a",
+                "blurb": "Your introduction to the college",
+                "description": "Hear from faces around the college and get in the queue for your free welcome meal. Head down to the Great Hall and that’s where it all begins",
+                "p_time": "0900-1800"
+            },
+            {
+                "name": "Welcome Meal",
+                "date": "Saturday 2nd October",
+                "time": "Evening",
+                "type": "n/a",
+                "blurb": "Free food!",
+                "description": "Fancy a free hot meal? Is that even a question? Go directly from the welcome talk, see you there...  ",
+                "p_time": "1930 start"
             },
             {
                 "name": "Board games/bar sports",
                 "date": "Saturday 2nd October",
                 "time": "Evening",
                 "type": "Quiet",
-                "blurb": "Come play some board games or bar sports!"
+                "blurb": "Come play some board games or bar sports!",
+                "description": ""
             },
             {
                 "name": "Campus tour and scavenger hunt",
