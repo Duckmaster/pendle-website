@@ -29,61 +29,211 @@
                 "p_time": "1930 start"
             },
             {
-                "name": "Board games/bar sports",
+                "name": "First Night Festival",
+                "date": "Saturday 2nd October",
+                "time": "Evening",
+                "type": "Loud",
+                "blurb": "Pendle's party after you finish un-packing!",
+                "description": "Something magical to start the year off right – the theme is enchanted forest, to give you a taste of our end of year Extravaganza. Come to Pendle’s main area dressed up in the enchanted forest theme and party into the small hours.",
+                "p_time": "2030 start"
+            },
+            {
+                "name": "Games and Bar Sports",
                 "date": "Saturday 2nd October",
                 "time": "Evening",
                 "type": "Quiet",
-                "blurb": "Come play some board games or bar sports!",
-                "description": ""
+                "blurb": "Fancy some Cards against Humanity or darts?",
+                "description": "If you don’t drink, don’t feel like a party, or want to relax, make your way to the upstairs of Pendle Rooms for an opportunity to play some games. There’s all manner of bar sports up there, and there will be board games available in the Harpley Lounge! ",
+                "p_time": "2030-2330"
             },
             {
-                "name": "Campus tour and scavenger hunt",
+                "name": "Post-it Note Competition",
                 "date": "Sunday 3rd October",
-                "time": "Morning",
-                "type": "Quiet",
-                "blurb": "Have a tour around the campus!"
+                "time": "n/a",
+                "type": "n/a",
+                "blurb": "Time to be imaginative!",
+                "description": "Get those creative juices flowing! You and your flat have exactly one week to produce a wonderful piece of post-it note art in your window. The best design will win the kudos of your cohort and may win a prize. <br> <b>WARNING:</b> Vulgar, rude/abusive, or unkind art/messages will be noted, reported and will not be tolerated in our community.",
+                "p_time": "n/a"
             },
             {
-                "name": "Picnic",
+                "name": "Campus tour",
                 "date": "Sunday 3rd October",
                 "time": "Afternoon",
                 "type": "Quiet",
-                "blurb": "Join us for a lovely picnic"
+                "blurb": "All the sights of campus!",
+                "description": "A specially curated tour of the best and most important areas on campus. Go with your reps from Pendle Rooms, on Sunday afternoon whenever suits you and your flat, making sure to complete the selfie competition if you’re interested! Whilst every effort has been made to make the route accessible, the tour should be around an hour so sensible clothing advised.",
+                "p_time": "~1400-1500"
             },
             {
-                "name": "Online/in person quiz",
+                "name": "Pendle Pub Quiz",
                 "date": "Sunday 3rd October",
                 "time": "Evening",
-                "type": "Loud",
-                "blurb": "First Pendle quiz of the academic year!"
+                "type": "Quiet",
+                "blurb": "Put your general knowledge to the test",
+                "description": "Join in for one of the iconic Pendle traditions: our pub quiz. To enjoy the fun you’ll need to pay money into the prize pot on the door: £1 per person or SPECIAL OFFER £5 per team (max. 8 members). Winners and second place get the cash prize so this could be your lucky day! ",
+                "p_time": "1930 start"
             },
             {
-                "name": "Welfare event",
+                "name": "Cake and Catch-up",
                 "date": "Monday 4th October",
                 "time": "Morning",
                 "type": "Quiet",
-                "blurb": "TBA"
+                "blurb": "Meet our CAT and welfare team over a lovely slice of cake",
+                "description": "Hosted by the JCR Welfare Team. The first weekend is pretty hard; if you’re struggling this is a perfect time to drop in and have a chat to people including some of the lovely, dedicated students and staff of the college. However you are feeling, come along if you want something relaxing and therapeutic – there's also some tea and cake around! ",
+                "p_time": "1030-1300"
             },
             {
-                "name": "MYCM",
+                "name": "Meet your Coursemates",
                 "date": "Monday 4th October",
                 "time": "Afternoon",
                 "type": "Quiet",
-                "blurb": "Meet your coursemates!"
+                "blurb": "Find people on your course... digitally!",
+                "description": "Revitalising a popular event from last year, join us on the <i> wonderful </i> Microsoft Teams for this online hour. Members of your course will be in a call to have a chat about your subject. It’s an opportunity to meet some people who you might walk to lectures with or might revise with later in the year.",
+                "p_time": "1330-1430 "
             },
             {
-                "name": "Glow",
+                "name": "Glitterball at GLOW",
                 "date": "Monday 4th October",
                 "time": "Evening",
                 "type": "Loud",
-                "blurb": "Skint mondays!!"
+                "blurb": "Set for a sparkly night!",
+                "description": "A scintillating glitterball themed event, with special décor and free entry before midnight. Get the bus to town with your reps. Remember to wear your wristband, good dancing shoes, some glitz, and some glam. This will be a club environment: flashing lights, loud music and alcohol are likely to be present.",
+                "p_time": "~2200/2300-0230"
             },
             {
-                "name": "Book club",
+                "name": "Book Club",
                 "date": "Monday 4th October",
                 "time": "Evening",
                 "type": "Quiet",
-                "blurb": "Join our welfare team for a bookclub in Pendle Rooms!"
+                "blurb": "Chill with a good book",
+                "description": "A themed, relaxed evening for book-enthusiasts to come together, share favourite novels or just chat. Come to the Harpley Lounge (1st floor of Pendle Rooms) to settle down on a sofa and find a little bit of home in stories you love.",
+                "p_time": "1900 start, (2100 finish)"
+            },
+            {
+                "name": "College Coffee with the LGBTQ+ Forum",
+                "date": "Tuesday 5th October",
+                "time": "Afternoon",
+                "type": "Quiet",
+                "blurb": "Enjoy a good cuppa",
+                "description": "Join the LGBTQ+ Forum for their event held in Fylde Common room. Hopefully you’ll know where you’re headed from the campus tour but head north up the spine and keep your eyes peeled for the orange, windmill sign of Fylde. The forum is bringing people in the LGBTQ+ community together from various colleges to create a welcoming environment.",
+                "p_time": "1130-1330"
+            },
+            {
+                "name": "BYO Picnic",
+                "date": "Tuesday 5th October",
+                "time": "Afternoon",
+                "type": "Quiet",
+                "blurb": "Let's hope it doesn't rain!",
+                "description": "A scintillating glitterball themed event, with special décor and free entry before midnight. Get the bus to town with your reps. Remember to wear your wristband, good dancing shoes, some glitz, and some glam. This will be a club environment: flashing lights, loud music and alcohol are likely to be present.",
+                "p_time": "1200-1500"
+            },
+            {
+                "name": "Sugar Rush",
+                "date": "Tuesday 5th October",
+                "time": "Evening",
+                "type": "Loud",
+                "blurb": "Set for a sparkly night!",
+                "description": "Best club in Lancaster! <br> Bar crawl! <br> Fancy dress! <br> ...All in one night. You’ll be making a whistle-stop tour through many bars on campus and then rushing off to The Sugarhouse (‘Sugar’) for a freshers’ exclusive night with Furness and Cartmel. The theme is P for Pendle so make sure to have something ready, whether it’s a Pineapple, Plumber, Patient, Piano, Pancake, Pint, or a Pick of your own! <br> Wristbands required, free entry <b> before midnight only. </b> ",
+                "p_time": "1800-0230"
+            },
+            {
+                "name": "Games Night + Bingo",
+                "date": "Tuesday 5th October",
+                "time": "Evening",
+                "type": "Quiet",
+                "blurb": "Dobbers at the ready!",
+                "description": "If you enjoyed the first games night, or missed it, don’t worry! There’s more. Another relaxed event is on for you where you can go to the Harpley Lounge upstairs in Pendle Rooms. You can play games and we’re even set to host a few rounds of Bingo – to be confirmed closer to the date.",
+                "p_time": "1900-2100"
+            },
+            {
+                "name": "Freshers’ Fest",
+                "date": "Wednesday 6th October",
+                "time": "Afternoon",
+                "type": "n/a",
+                "blurb": "Join some societies!",
+                "description": "This event sets up your free time for months or years to come. Mosey on down to the Sports Centre and discover the societies, forum groups, and clubs that Lancaster University has to offer. There’s plenty to choose from so make the most of it!",
+                "p_time": "~2200/2300-0230"
+            },
+            {
+                "name": "80s Neon Night",
+                "date": "Wednesday 6th October",
+                "time": "Evening",
+                "type": "Loud",
+                "blurb": "Ready for a night of throwbacks?",
+                "description": "Attend this night out for a fantastic, free-entry, fluorescent experience. Come dressed in 80s neon garb, and enjoy a Pendle Freshers exclusive evening in Generation, Lancaster’s LGBT+ venue. We’ve got a floor booked off for ourselves so make sure to wear your wristband and head down with your reps.",
+                "p_time": "~2200-0100"
+            },
+            {
+                "name": "SoberSoc’s Big Night In",
+                "date": "Wednesday 6th October",
+                "time": "Evening",
+                "type": "Quiet",
+                "blurb": "A fun evening sans alcohol!",
+                "description": "Group games? Video games? Party games? This event has you covered if you need a night in. You can find all of this and more in Bowland College (Trough of Bowland and Bowland JCR area), free of cost and free of alcohol.",
+                "p_time": "2000-late"
+            },
+            {
+                "name": "Town tours",
+                "date": "Thursday 7th October",
+                "time": "Afternoon",
+                "type": "Quiet",
+                "blurb": "Get your bearings around Lancaster!",
+                "description": "Another specially curated tour is available to help you get to grips with Lancaster. Although you will have doubtless worked lots out, there’s a few extra bars, restaurants, cafes, etc. to be pointed out along the way – as well as the castle and other sights. Your reps will agree when/where to meet you and will help to guide you around.",
+                "p_time": "~1200-1330"
+            },
+            {
+                "name": "Pendle Live",
+                "date": "Thursday 7th October",
+                "time": "Evening",
+                "type": "Loud",
+                "blurb": "Great music in a great venue!",
+                "description": "Another Pendle tradition: exact details to be confirmed. Bring it home to Pendle, in Pendle Rooms, for a nice evening of music.",
+                "p_time": "~1930"
+            },
+            {
+                "name": "Woodland Walk",
+                "date": "Friday 8th October",
+                "time": "Morning & Afternoon",
+                "type": "Quiet",
+                "blurb": "A nice walk around the outskirts of campus!",
+                "description": "Dig out your walking boots! <br> Around academic events, drop into a group doing the woodland walk. Groups will be departing every 15-20 minutes from Pendle Rooms and completing the route around campus (weather permitting). If you miss nature and want to go for a wander through the greenery around Lancaster University, make sure to drop in on one of these walks!",
+                "p_time": "1000-1400"
+            },
+            {
+                "name": "Green Pendle",
+                "date": "Friday 8th October",
+                "time": "Afternoon",
+                "type": "Quiet",
+                "blurb": "Meet the Pendle SUST-IT team!",
+                "description": "If you’ve been on the woodland walk, you’ll be landed back at Pendle Rooms. Why not drop by Green Pendle, a dynamic carousel and showcase of the eco-friendly innovation and energy in Pendle and Lancaster. There’s the opportunity to participate in competitions, meet a winning team of Lancaster’s sustainability challenge, and find out more about what the Green in Pendle is all about.",
+                "p_time": "~1100-1500"
+            },
+            {
+                "name": "Pendle’s Big Night Out",
+                "date": "Friday 8th October",
+                "time": "Evening",
+                "type": "Loud",
+                "blurb": "Bar crawl!!",
+                "description": "Pendle breaks free of campus for a bar crawl. Heading to some of the best pubs and bars Lancaster has to offer, make sure to capitalise on this opportunity. Reps will be guiding you from one venue to the next but you must have your wristband on! Note: everyone is welcome to drink alcoholic or alcohol-free drinks.",
+                "p_time": "1800 start"
+            },
+            {
+                "name": "Welfare Breakfast - Eat and Greet",
+                "date": "Sunday 10th October",
+                "time": "Morning",
+                "type": "Quiet",
+                "blurb": "Talk to our lovely Welfare team!",
+                "description": "Hosted by the JCR Welfare Team. Welcome Week is a long, difficult week that might whizz by as if it’s a few hours or drag at times because of the strain of it all. Being in a new environment and meeting new people all the time are tiring, rewarding, and all manner of emotions. If you need some respite and an easy morning, drop in to the Welfare Breakfast.",
+                "p_time": "0930-1100"
+            },
+            {
+                "name": "Film Night with Take2",
+                "date": "Sunday 10th October",
+                "time": "Evening",
+                "type": "Loud",
+                "blurb": "Set for a sparkly night!",
+                "description": "To bring people together for the last night of welcome week, Pendle has secured a screening of The Dark Knight with the wonderful Take 2 cinema. The screening will only cost £1, and it is the only JCR-run event in the week for which you may need to book. <br> Tickets are available <a href='https://lancastersu.co.uk/groups/take-2-cinema/events/the-dark-knight-pendle-fresher-s-private-screening' target='_blank'>here</a> but remaining space will be sold on the door. Make your way to the cinema in Bowland Main for when doors open at 7.15pm. What a lovely way to conclude the week! ",
+                "p_time": "1900-2215"
             }
         ]
     }

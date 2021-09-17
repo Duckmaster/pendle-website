@@ -44,7 +44,7 @@ function createTimetableCards(numCards) {
 }
 function createCard() {
     var newCard = document.createElement("div");
-    newCard.className = "card m-3";
+    newCard.className = "card m-2";
     newCard.style = "width: 18rem; border: 3px solid DarkGreen;";
     var cardBody = document.createElement("div");
     cardBody.className = "card-body d-flex flex-column";
@@ -114,7 +114,7 @@ function createModal(cardButton) {
             if (event.name == eventTitle) {
                 console.log(events);
                 modal.getElementsByTagName("h5")[0].textContent = event.name;
-                modal.getElementsByTagName("p")[0].textContent = event.description;
+                modal.getElementsByTagName("p")[0].innerHTML = event.description;
                 $("#myModal").modal();
             }
         }
