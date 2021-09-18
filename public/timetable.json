@@ -114,7 +114,7 @@
                 "date": "Tuesday 5th October",
                 "time": "Afternoon",
                 "type": "Quiet",
-                "blurb": "Enjoy a good cuppa",
+                "blurb": "Enjoy a good cuppa!",
                 "description": "Join the LGBTQ+ Forum for their event held in Fylde Common room. Hopefully you’ll know where you’re headed from the campus tour but head north up the spine and keep your eyes peeled for the orange, windmill sign of Fylde. The forum is bringing people in the LGBTQ+ community together from various colleges to create a welcoming environment.",
                 "p_time": "1130-1330"
             },
@@ -213,7 +213,7 @@
                 "date": "Friday 8th October",
                 "time": "Evening",
                 "type": "Loud",
-                "blurb": "Bar crawl!!",
+                "blurb": "Bar crawl through Lancaster!",
                 "description": "Pendle breaks free of campus for a bar crawl. Heading to some of the best pubs and bars Lancaster has to offer, make sure to capitalise on this opportunity. Reps will be guiding you from one venue to the next but you must have your wristband on! Note: everyone is welcome to drink alcoholic or alcohol-free drinks.",
                 "p_time": "1800 start"
             },
@@ -230,8 +230,8 @@
                 "name": "Film Night with Take2",
                 "date": "Sunday 10th October",
                 "time": "Evening",
-                "type": "Loud",
-                "blurb": "Set for a sparkly night!",
+                "type": "Quiet",
+                "blurb": "Kick back with your popcorn or snacks of choice!",
                 "description": "To bring people together for the last night of welcome week, Pendle has secured a screening of The Dark Knight with the wonderful Take 2 cinema. The screening will only cost £1, and it is the only JCR-run event in the week for which you may need to book. <br> Tickets are available <a href='https://lancastersu.co.uk/groups/take-2-cinema/events/the-dark-knight-pendle-fresher-s-private-screening' target='_blank'>here</a> but remaining space will be sold on the door. Make your way to the cinema in Bowland Main for when doors open at 7.15pm. What a lovely way to conclude the week! ",
                 "p_time": "1900-2215"
             }
