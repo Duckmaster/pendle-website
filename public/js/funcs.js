@@ -114,7 +114,8 @@ function createModal(cardButton) {
             if (event.name == eventTitle) {
                 console.log(events);
                 modal.getElementsByTagName("h5")[0].textContent = event.name;
-                modal.getElementsByTagName("p")[0].innerHTML = event.description;
+                modal.getElementsByTagName("p")[0].innerHTML = `<b>Time:</b> ${event.p_time}`;
+                modal.getElementsByTagName("p")[1].innerHTML = event.description;
                 $("#myModal").modal();
             }
         }
