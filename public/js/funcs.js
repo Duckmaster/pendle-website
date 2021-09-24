@@ -14,7 +14,9 @@ function displayTimetable() {
             title.textContent = events[i].name;
             var date = body.getElementsByTagName("p")[0];
             date.textContent = `Date: ${events[i].date} (${events[i].time}) `;
-            var description = body.getElementsByTagName("p")[1];
+            var eventType = body.getElementsByTagName("p")[1];
+            eventType.textContent = events[i].type;
+            var description = body.getElementsByTagName("p")[2];
             description.textContent = events[i].blurb;
             i++;
         }  
@@ -55,6 +57,10 @@ function createCard() {
     var cardDate = document.createElement("p");
     cardDate.className = "card-text";
     cardDate.textContent = "some date";
+    var cardET = document.createElement("p");
+    cardET.className = "card-text";
+    cardET.textContent = "some type";
+    cardET.style = "display: none";
     var cardText = document.createElement("p");
     cardText.className = "card-text";
     cardText.textContent = "some text";
@@ -67,6 +73,7 @@ function createCard() {
 
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(cardDate);
+    cardBody.appendChild(cardET);
     cardBody.appendChild(cardText);
     cardBody.appendChild(cardButton);
     newCard.appendChild(cardBody);
@@ -79,23 +86,26 @@ function filterEvents() {
     var daySelect = controlsDiv.getElementsByTagName("select")[0];
     var checkboxes = Array.from(controlsDiv.getElementsByTagName("input"));
     var tickedCheckboxes = checkboxes.filter(cb => cb.checked);
-     
+    var todCB = tickedCheckboxes.filter(cb => cb["value"] == "Morning" || cb["value"] == "Afternoon" || cb["value"] == "Evening");
+    var etCB = tickedCheckboxes.filter(cb => cb["value"] == "Loud" || cb["value"] == "Quiet");
+    
     var timetableRow = document.getElementById("timetable").children[0];
     var selectedDay = daySelect.value;
 
     for (card of timetableRow.children) {
         var date = card.children[0].children[1].textContent;
-        var hide = true;
+        var type = card.children[0].children[2].textContent;
+        var todHide = todCB.length ? true : false;
+        var cbHide = etCB.length ? true : false;
         if (date.includes(selectedDay)) {
-            if (tickedCheckboxes.length == 0) {
-                hide = false;
-            } else {
-                for (cb of tickedCheckboxes) {
-                    if (date.includes(cb.value)) hide = false;
-                }
+            for (cb of todCB) {
+                if (date.includes(cb.value)) todHide = false;
+            }
+            for (cb of etCB) {
+                if (type.includes(cb.value)) cbHide = false 
             }
         } 
-        if (hide) {
+        if (todHide || cbHide) {
             card.style["display"] = "none";
         } else {
             card.style["display"] = "";

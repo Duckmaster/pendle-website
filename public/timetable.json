@@ -5,7 +5,7 @@
                 "name": "Arrivals",
                 "date": "Saturday 2nd October",
                 "time": "Morning & Afternoon",
-                "type": "n/a",
+                "type": "Quiet",
                 "blurb": "Moving in!",
                 "description": "JCR Exec and Welcome Reps will be around to greet you and show you to your rooms",
                 "p_time": "0900-1800"
@@ -14,7 +14,7 @@
                 "name": "Welcome Talk",
                 "date": "Saturday 2nd October",
                 "time": "Evening",
-                "type": "n/a",
+                "type": "Quiet",
                 "blurb": "Your introduction to the college",
                 "description": "Hear from faces around the college and get in the queue for your free welcome meal. Head down to the Great Hall and that’s where it all begins",
                 "p_time": "0900-1800"
@@ -23,7 +23,7 @@
                 "name": "Welcome Meal",
                 "date": "Saturday 2nd October",
                 "time": "Evening",
-                "type": "n/a",
+                "type": "Quiet",
                 "blurb": "Free food!",
                 "description": "Fancy a free hot meal? Is that even a question? Go directly from the welcome talk, see you there...  ",
                 "p_time": "1930 start"
@@ -149,10 +149,10 @@
                 "name": "Freshers’ Fest",
                 "date": "Wednesday 6th October",
                 "time": "Afternoon",
-                "type": "n/a",
+                "type": "Quiet",
                 "blurb": "Join some societies!",
                 "description": "This event sets up your free time for months or years to come. Mosey on down to the Sports Centre and discover the societies, forum groups, and clubs that Lancaster University has to offer. There’s plenty to choose from so make the most of it!",
-                "p_time": "2030 start"
+                "p_time": "1200-1700"
             },
             {
                 "name": "80s Neon Night",
