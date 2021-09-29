@@ -17,7 +17,7 @@
                 "type": "Quiet",
                 "blurb": "Your introduction to the college",
                 "description": "Hear from faces around the college and get in the queue for your free welcome meal. Head down to the Great Hall and that’s where it all begins",
-                "p_time": "0900-1800"
+                "p_time": "1830-1930"
             },
             {
                 "name": "Welcome Meal",
@@ -225,6 +225,15 @@
                 "blurb": "Talk to our lovely Welfare team!",
                 "description": "Hosted by the JCR Welfare Team. Welcome Week is a long, difficult week that might whizz by as if it’s a few hours or drag at times because of the strain of it all. Being in a new environment and meeting new people all the time are tiring, rewarding, and all manner of emotions. If you need some respite and an easy morning, drop in to the Welfare Breakfast.",
                 "p_time": "0930-1100"
+            },            
+            {
+                "name": "Meet the sports captains ",
+                "date": "Saturday 9th October",
+                "time": "Afternoon",
+                "type": "Quiet",
+                "blurb": "Get involved in some sport!",
+                "description": "Interested in college sport? You’ll have no doubt seen all manner of sports and activities on offer on Wednesday at the Freshers’ Fest; college sport is a big part of that. It’s about competition, community, and coming together to have a great time. If you’d like to meet the sports captains that help this all to happen then drop in to Pendle Rooms! <br>As this is the JCR Exec’s and the Reps’ day off, this is the only event on during the day. ",
+                "p_time": "1330 start"
             },
             {
                 "name": "Film Night with Take2",
