@@ -105,6 +105,9 @@ function filterEvents() {
                 if (type.includes(cb.value)) cbHide = false 
             }
         } 
+        else {
+            todHide = cbHide = true;
+        }
         if (todHide || cbHide) {
             card.style["display"] = "none";
         } else {
